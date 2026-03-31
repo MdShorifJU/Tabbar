@@ -9,7 +9,7 @@ class Module14class1 extends StatefulWidget {
 
 class _Module14class1State extends State<Module14class1>
     with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+    late TabController _tabController;
 
   @override
   void initState() {
@@ -22,21 +22,35 @@ class _Module14class1State extends State<Module14class1>
     return Scaffold(
       backgroundColor: const Color(0xFFF5F6FA),
 
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   elevation: 0,
+      //   title: const Text(
+      //     "Custom TabBar",
+      //     style: TextStyle(
+      //       color: Colors.black,
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //   ),
+      //   centerTitle: true,
+      // ),
+
+
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          "Custom TabBar",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
+        title: Text("Custom tabbar",
+        style: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold
+        ),
         ),
         centerTitle: true,
       ),
-
       body: Column(
         children: [
+
+          SizedBox(height: 100,),
           Container(
             margin: const EdgeInsets.all(16),
             padding: const EdgeInsets.all(6),
@@ -47,9 +61,9 @@ class _Module14class1State extends State<Module14class1>
 
             child: TabBar(
               controller: _tabController,
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.grey,
-              labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+              labelColor: Colors.blueAccent,
+              unselectedLabelColor: Colors.black,
+              labelStyle: const TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
 
               tabs: const [
                 Tab(text: "Home"),
